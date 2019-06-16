@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="content-type">
+        <title>
+            js调用java
+        </title>
+    </head>
+
+    <body>
+        <p>
+            <xmp id="show">
+            </xmp>
+        </p>
+        <p>
+            <input type="button" id="enter1" value="调用Native方法" onclick="testClick1();"
+            />
+        </p>
+        <p>
+            <input type="button" id="enter2" value="调用Native方法" onclick="testClick2();"
+            />
+        </p>
+
+    </body>
+    <script>
+
+        function testClick1() {
+            //call native method
+            window.WebViewJavascriptBridge.callHandler(
+                'save'
+                , {"phone":"223","password":"dsad"}
+                , function(responseData) {
+                    document.getElementById("show").innerHTML = "reponseData = " + responseData
+                }
+            );
+        }
+        function testClick2() {
+            //call native method
+            window.WebViewJavascriptBridge.callHandler(
+                'get'
+                , {"132":"223"}
+                , function(responseData) {
+                    document.getElementById("show").innerHTML = "reponseData = " + responseData
+                }
+            );
+        }
+
+    </script>
+
+</html>
+

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!-- webview 演示web调用Java -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/backt"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:background="@mipmap/a" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="                    测量提醒"
+            android:textColor="#000"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <com.github.lzyzsd.jsbridge.BridgeWebView
+        android:id="@+id/webViewt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></com.github.lzyzsd.jsbridge.BridgeWebView>
+</LinearLayout>
